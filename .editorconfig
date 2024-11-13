@@ -1,0 +1,246 @@
+root = true
+
+# Общие настройки
+charset = utf-8-bom
+
+# Настройки для файлов xml
+[*.{xml}]
+indent_style = space
+indent_size = 4
+tab_width = 4
+trim_trailing_whitespace = true
+end_of_line = crlf
+
+# Настройки для файлов cs
+[*.cs]
+
+# Формат файлов
+indent_style = space
+indent_size = 4
+tab_width = 4
+trim_trailing_whitespace = true
+end_of_line = crlf
+
+# Правила качества кода IDE
+dotnet_diagnostic.ide0005.severity = warning
+dotnet_diagnostic.ide0046.severity = suggestion
+dotnet_diagnostic.ide0048.severity = none
+dotnet_diagnostic.ide0058.severity = none
+dotnet_diagnostic.ide0270.severity = none
+
+# Правила качества кода dotnet
+dotnet_diagnostic.ca1018.severity = warning
+dotnet_diagnostic.ca1041.severity = warning
+dotnet_diagnostic.ca1047.severity = warning
+dotnet_diagnostic.ca1051.severity = warning
+dotnet_diagnostic.ca1061.severity = warning
+dotnet_diagnostic.ca1067.severity = warning
+dotnet_diagnostic.ca1068.severity = warning
+dotnet_diagnostic.ca1069.severity = warning
+dotnet_diagnostic.ca1070.severity = warning
+dotnet_diagnostic.ca1507.severity = warning
+dotnet_diagnostic.ca1710.severity = warning
+dotnet_diagnostic.ca1712.severity = warning
+dotnet_diagnostic.ca1805.severity = warning
+dotnet_diagnostic.ca1806.severity = warning
+dotnet_diagnostic.ca1821.severity = warning
+dotnet_diagnostic.ca1822.severity = none
+dotnet_diagnostic.ca1825.severity = warning
+dotnet_diagnostic.ca1827.severity = warning
+dotnet_diagnostic.ca1828.severity = warning
+dotnet_diagnostic.ca1829.severity = warning
+dotnet_diagnostic.ca1830.severity = warning
+dotnet_diagnostic.ca1832.severity = warning
+dotnet_diagnostic.ca1833.severity = warning
+dotnet_diagnostic.ca1834.severity = warning
+dotnet_diagnostic.ca1835.severity = warning
+dotnet_diagnostic.ca1836.severity = warning
+dotnet_diagnostic.ca1841.severity = warning
+dotnet_diagnostic.ca1842.severity = warning
+dotnet_diagnostic.ca1843.severity = warning
+dotnet_diagnostic.ca1845.severity = warning
+dotnet_diagnostic.ca1846.severity = warning
+dotnet_diagnostic.ca1847.severity = warning
+dotnet_diagnostic.ca1850.severity = warning
+dotnet_diagnostic.ca1855.severity = warning
+dotnet_diagnostic.ca2012.severity = warning
+dotnet_diagnostic.ca2016.severity = warning
+dotnet_diagnostic.ca2211.severity = warning
+dotnet_diagnostic.ca2254.severity = warning
+dotnet_diagnostic.ca1711.severity = none # Именование классов
+dotnet_diagnostic.cs1591.severity = none
+
+# Правила качества кода StyleCop
+dotnet_diagnostic.sa0001.severity = none
+dotnet_diagnostic.sa1101.severity = none
+dotnet_diagnostic.sa1118.severity = none
+dotnet_diagnostic.sa1200.severity = none
+dotnet_diagnostic.sa1208.severity = none
+dotnet_diagnostic.sa1309.severity = none
+dotnet_diagnostic.sa1401.severity = none
+dotnet_diagnostic.sa1412.severity = error # Кодировка UTF-8-BOM
+dotnet_diagnostic.sa1413.severity = none
+dotnet_diagnostic.sa1601.severity = none
+dotnet_diagnostic.sa1605.severity = none
+dotnet_diagnostic.sa1607.severity = none
+dotnet_diagnostic.sa1623.severity = none
+dotnet_diagnostic.sa1625.severity = none
+dotnet_diagnostic.sa1627.severity = none
+dotnet_diagnostic.sa1629.severity = none
+dotnet_diagnostic.sa1633.severity = none
+dotnet_diagnostic.sa1634.severity = none
+dotnet_diagnostic.sa1635.severity = none
+dotnet_diagnostic.sa1636.severity = none
+dotnet_diagnostic.sa1637.severity = none
+dotnet_diagnostic.sa1638.severity = none
+dotnet_diagnostic.sa1639.severity = none
+dotnet_diagnostic.sa1640.severity = none
+dotnet_diagnostic.sa1641.severity = none
+dotnet_diagnostic.sa1642.severity = none
+dotnet_diagnostic.sx1309.severity = warning # Альтернативное правило для нейминга приватных полей вместо sa1309 (с нижнего подчеркивания)
+
+# Правила кода dotnet
+dotnet_code_quality_unused_parameters = all:warning
+
+# Правила стиля кода dotnet
+dotnet_style_allow_multiple_blank_lines_experimental = false:warning
+dotnet_style_allow_statement_immediately_after_block_experimental = false:warning
+dotnet_style_coalesce_expression = true:warning
+dotnet_style_collection_initializer = true:warning
+dotnet_style_explicit_tuple_names = true:warning
+dotnet_style_namespace_match_folder = true:warning
+dotnet_style_null_propagation = true:warning
+dotnet_style_object_initializer = true:warning
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:warning
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:warning
+dotnet_style_parentheses_in_other_operators = always_for_clarity:warning
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:warning
+dotnet_style_predefined_type_for_locals_parameters_members = true:warning
+dotnet_style_predefined_type_for_member_access = true:warning
+dotnet_style_prefer_auto_properties = true:warning
+dotnet_style_prefer_compound_assignment = true:warning
+dotnet_style_prefer_conditional_expression_over_assignment = true:warning
+dotnet_style_prefer_conditional_expression_over_return = true:none
+dotnet_style_prefer_inferred_anonymous_type_member_names = true:warning
+dotnet_style_prefer_inferred_tuple_names = true:warning
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:warning
+dotnet_style_prefer_simplified_boolean_expressions = true:warning
+dotnet_style_prefer_simplified_interpolation = true:warning
+dotnet_style_qualification_for_event = false:warning
+dotnet_style_qualification_for_field = false:warning
+dotnet_style_qualification_for_method = false:warning
+dotnet_style_qualification_for_property = false:warning
+dotnet_style_readonly_field = true:suggestion
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
+
+# Правила кода C#
+csharp_indent_labels = no_change
+csharp_prefer_braces = true:warning
+csharp_prefer_simple_default_expression = true:warning
+csharp_prefer_simple_using_statement = true:warning
+csharp_prefer_static_local_function = true:warning
+csharp_space_around_binary_operators = before_and_after
+csharp_using_directive_placement = outside_namespace:warning
+
+# Правила стиля кода C#
+csharp_style_allow_blank_line_after_colon_in_constructor_initializer_experimental = false:warning
+csharp_style_allow_blank_lines_between_consecutive_braces_experimental = false:warning
+csharp_style_allow_embedded_statements_on_same_line_experimental = false:warning
+csharp_style_conditional_delegate_call = true:warning
+csharp_style_deconstructed_variable_declaration = true:warning
+csharp_style_expression_bodied_accessors = when_on_single_line:warning
+csharp_style_expression_bodied_constructors = false:warning
+csharp_style_expression_bodied_indexers = when_on_single_line:warning
+csharp_style_expression_bodied_lambdas = when_on_single_line:warning
+csharp_style_expression_bodied_local_functions = false:warning
+csharp_style_expression_bodied_methods = false:warning
+csharp_style_expression_bodied_operators = false:warning
+csharp_style_expression_bodied_properties = when_on_single_line:warning
+csharp_style_implicit_object_creation_when_type_is_apparent = true:warning
+csharp_style_inlined_variable_declaration = true:warning
+csharp_style_namespace_declarations = file_scoped:warning
+csharp_style_pattern_matching_over_as_with_null_check = true:warning
+csharp_style_pattern_matching_over_is_with_cast_check = true:warning
+csharp_style_prefer_extended_property_pattern = true:warning
+csharp_style_prefer_index_operator = true:warning
+csharp_style_prefer_local_over_anonymous_function = true:warning
+csharp_style_prefer_method_group_conversion = true:warning
+csharp_style_prefer_not_pattern = true:warning
+csharp_style_prefer_null_check_over_type_check = true:warning
+csharp_style_prefer_pattern_matching = true:warning
+csharp_style_prefer_range_operator = true:warning
+csharp_style_prefer_readonly_struct = true:warning
+csharp_style_prefer_switch_expression = true:warning
+csharp_style_prefer_top_level_statements = true:warning
+csharp_style_prefer_tuple_swap = true:warning
+csharp_style_prefer_utf8_string_literals = true:warning
+csharp_style_throw_expression = true:warning
+csharp_style_unused_value_assignment_preference = discard_variable:warning
+csharp_style_unused_value_expression_statement_preference = unused_local_variable:none
+csharp_style_var_elsewhere = true:warning
+csharp_style_var_for_built_in_types = true:warning
+csharp_style_var_when_type_is_apparent = true:warning
+dotnet_sort_system_directives_first = false
+
+# Правила ReSharper
+resharper_csharp_max_line_length = 400
+resharper_max_attribute_length_for_same_line = 255
+resharper_place_field_attribute_on_same_line = if_owner_is_single_line
+resharper_new_line_before_while = true
+
+# Правила нейминга
+dotnet_naming_rule.interface_should_be_begins_with_i.severity = warning
+dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
+dotnet_naming_rule.interface_should_be_begins_with_i.style = begins_with_i
+
+dotnet_naming_rule.types_should_be_pascal_case.severity = warning
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = warning
+dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
+dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
+
+# Спецификация символов
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.interface.required_modifiers = 
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.types.required_modifiers = 
+
+dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
+dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.non_field_members.required_modifiers = 
+
+# Стили нейминга
+dotnet_naming_style.begins_with_i.required_prefix = I
+dotnet_naming_style.begins_with_i.required_suffix = 
+dotnet_naming_style.begins_with_i.word_separator = 
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+# ReSharper properties
+resharper_xmldoc_indent_child_elements = RemoveIndent
+resharper_xmldoc_indent_text = RemoveIndent
+resharper_xmldoc_spaces_inside_tags = true
+
+# Исключения для сгенерированного кода
+[*.g.cs]
+generated_code = true
+dotnet_diagnostic.cs1591.severity = none
+dotnet_diagnostic.ide0005.severity = none
+
+[/**/bin/**, /**/obj/**]
+generated_code = true
