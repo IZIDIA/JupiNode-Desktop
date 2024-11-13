@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace JupiNode_Desktop.ViewModels;
+namespace Jupi.Core.ViewModels;
 
 public class ViewModelBase : ObservableObject
 {

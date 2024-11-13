@@ -5,7 +5,9 @@
         <Nullable>enable</Nullable>
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
+        <LangVersion>latest</LangVersion>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+        <BaseOutputPath>..\debug</BaseOutputPath>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,5 +23,15 @@
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.0-beta1"/>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Core\Jupi.Components\Jupi.Components.csproj" />
+      <ProjectReference Include="..\Core\Jupi.Core\Jupi.Core.csproj" />
+      <ProjectReference Include="..\Core\Jupi.Resources\Jupi.Resources.csproj" />
+      <ProjectReference Include="..\Core\Jupi.Themes\Jupi.Themes.csproj" />
+      <ProjectReference Include="..\Data\Jupi.Data\Jupi.Data.csproj" />
+      <ProjectReference Include="..\Editors\Jupi.Authentication\Jupi.Authentication.csproj" />
+      <ProjectReference Include="..\Editors\Jupi.Workspace\Jupi.Workspace.csproj" />
     </ItemGroup>
 </Project>
