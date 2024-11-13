@@ -1,9 +1,10 @@
-<Window
+<suki:SukiWindow
     x:Class="JupiNode_Desktop.Views.MainWindow"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:suki="https://github.com/kikipoulet/SukiUI"
     xmlns:vm="using:JupiNode_Desktop.ViewModels"
     Title="JupiNode_Desktop"
     Width="1200"
@@ -16,6 +17,6 @@
     mc:Ignorable="d">
 
     <!--  TODO  -->
-    <Grid Background="Purple" />
+    <Grid />
 
-</Window>
+</suki:SukiWindow>

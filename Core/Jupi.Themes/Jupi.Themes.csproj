@@ -9,4 +9,19 @@
         <BaseOutputPath>..\..\debug</BaseOutputPath>
     </PropertyGroup>
 
+    <ItemGroup>
+        <AvaloniaResource Include="Assets\**\*.*" />
+        <AvaloniaResource Include="Themes\**\*.axaml" />
+        <AvaloniaResource Include="Styles\**\*.axaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Avalonia" Version="11.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets\" />
+      <Folder Include="Themes\" />
+    </ItemGroup>
+
 </Project>
