@@ -9,4 +9,11 @@
         <BaseOutputPath>..\..\debug</BaseOutputPath>
     </PropertyGroup>
 
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.2.0"/>
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.2.0" PrivateAssets="compile"/>
+        <PackageReference Include="DialogHost.Avalonia" Version="0.8.1" PrivateAssets="compile" />
+        <PackageReference Include="SukiUI" Version="6.0.0-rc"/>
+    </ItemGroup>
+
 </Project>

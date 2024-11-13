@@ -1,0 +1,68 @@
+﻿<Window
+    x:Class="Jupi.Components.DialogsManager.WindowWithResult"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dialogsManager="clr-namespace:Jupi.Components.DialogsManager"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="WindowWithResult"
+    d:DesignHeight="300"
+    d:DesignWidth="500"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <GridLength x:Key="ButtonsPanelGridLength">35</GridLength>
+    </Window.Resources>
+    <Grid Margin="2,0,2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="{DynamicResource ButtonsPanelGridLength}" />
+        </Grid.RowDefinitions>
+        <ContentPresenter x:Name="contentPresenter" Grid.Row="0" />
+        <StackPanel
+            x:Name="stackPanelLeft"
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            Orientation="Horizontal" />
+        <StackPanel
+            x:Name="stackPanelRight"
+            Grid.Row="1"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <dialogsManager:DialogButton
+                x:Name="buttonOk"
+                HorizontalAlignment="Right"
+                Click="ButtonOk_OnClick"
+                Content="ОК"
+                DialogResult="OK"
+                Order="900" />
+            <dialogsManager:DialogButton
+                x:Name="buttonYes"
+                HorizontalAlignment="Right"
+                Click="ButtonYes_OnClick"
+                Content="Да"
+                DialogResult="Yes"
+                Order="910" />
+            <dialogsManager:DialogButton
+                x:Name="buttonNo"
+                HorizontalAlignment="Right"
+                Click="ButtonNo_OnClick"
+                Content="Нет"
+                DialogResult="No"
+                Order="920" />
+            <dialogsManager:DialogButton
+                x:Name="buttonCancel"
+                HorizontalAlignment="Right"
+                Click="ButtonCancel_OnClick"
+                Content="Отменить"
+                DialogResult="Cancel"
+                Order="930" />
+            <dialogsManager:DialogButton
+                x:Name="buttonClose"
+                HorizontalAlignment="Right"
+                Click="ButtonClose_OnClick"
+                Content="Закрыть"
+                DialogResult="None"
+                Order="940" />
+        </StackPanel>
+    </Grid>
+</Window>

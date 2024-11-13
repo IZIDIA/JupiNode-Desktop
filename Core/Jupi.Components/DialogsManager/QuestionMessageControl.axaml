@@ -1,0 +1,67 @@
+﻿<UserControl
+    x:Class="Jupi.Components.DialogsManager.QuestionMessageControl"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dialogHostAvalonia="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
+    xmlns:dialogsManager="clr-namespace:Jupi.Components.DialogsManager"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="400"
+    Height="130"
+    d:DesignHeight="130"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+    <!--  TODO: Адаптировать под тему Suki  -->
+    <Grid>
+        <Grid.RowDefinitions>20,*,30</Grid.RowDefinitions>
+        <Grid Row="0">
+            <TextBlock
+                x:Name="Title"
+                x:FieldModifier="public"
+                FontSize="12"
+                Text="Title" />
+            <Grid HorizontalAlignment="Right">
+                <Button
+                    Width="20"
+                    Height="20"
+                    Padding="4"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=dialogHostAvalonia:DialogHost}, Path=CloseDialogCommand}"
+                    CommandParameter="{x:Static dialogsManager:JupiDialogResult.None}">
+                    <!--  TODO  -->
+                    <!-- <Svg Path="{x:Static common:ImagesResources.RedCross}" /> -->
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Row="1">
+            <TextBlock
+                x:Name="ContentTextBlock"
+                Margin="5,0,5,0"
+                VerticalAlignment="Center"
+                x:FieldModifier="public"
+                TextAlignment="Center"
+                TextWrapping="Wrap">
+                Lorem ipsum dolor sit amet,consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </TextBlock>
+        </Grid>
+        <Grid Row="2">
+            <StackPanel
+                HorizontalAlignment="Center"
+                Orientation="Horizontal"
+                Spacing="10">
+                <Button
+                    x:Name="OkButton"
+                    Height="30"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=dialogHostAvalonia:DialogHost}, Path=CloseDialogCommand}"
+                    CommandParameter="{x:Static dialogsManager:JupiDialogResult.OK}"
+                    Content="ОК" />
+                <Button
+                    Height="30"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=dialogHostAvalonia:DialogHost}, Path=CloseDialogCommand}"
+                    CommandParameter="{x:Static dialogsManager:JupiDialogResult.Cancel}"
+                    Content="Отмена" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
